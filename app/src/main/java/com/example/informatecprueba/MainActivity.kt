@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     var nombre : String =""
     var carrera : String = ""
     var foto : String = ""
-    var wsConsultar : String = "http://192.168.100.58/Servicios/MostrarAlumno.php"//AGREGAMOS LA DIRECCIONDE DONDE SE VA A CONSUMIR EL SERVICIO WEB
+    var wsConsultar : String = "http://192.168.137.181/Servicios/MostrarAlumno.php"//AGREGAMOS LA DIRECCIONDE DONDE SE VA A CONSUMIR EL SERVICIO WEB
     var hilo : ObtenerUnServicioWeb? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -123,7 +123,7 @@ class MainActivity : AppCompatActivity() {
                             nombre =nom
                             carrera = carr
                             foto =  fot
-                            Toast.makeText(baseContext, "aLUMNOeNCONTRADO", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(baseContext, "ALUMNO ENCONTRADO", Toast.LENGTH_SHORT).show()
                             val intent = Intent(baseContext,CredencialActivity::class.java)
                             intent.putExtra(CredencialActivity.EXTRA_NoControl,ncontrol)
                             intent.putExtra(CredencialActivity.EXTRA_Nombre,nombre)

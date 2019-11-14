@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="#313E88">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:screenOrientation="landscape"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="400dp"
+                android:layout_height="109dp" app:srcCompat="@drawable/logotecnm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.525"/>
+        <ImageView
+                android:layout_width="450dp"
+                android:layout_height="294dp" app:srcCompat="@drawable/tecnm2"
+                android:id="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" app:layout_constraintHorizontal_bias="0.576"/>
+        <TextView
+                android:text="Numero de Control"
+                android:layout_width="383dp"
+                android:layout_height="46dp"
+                android:id="@+id/tvNoControl"
+                android:textColor="@android:color/background_light" android:textSize="24sp"
+                android:textAlignment="textStart"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="12dp"
+                app:layout_constraintStart_toEndOf="@+id/imgFotoUser" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre"/>
+        <ImageView
+                android:layout_width="176dp"
+                android:layout_height="233dp" app:srcCompat="@drawable/abc_vector_test"
+                android:id="@+id/imgFotoUser" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.079"
+                android:layout_marginTop="56dp" app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="Nombre"
+                android:layout_width="383dp"
+                android:layout_height="46dp"
+                android:id="@+id/tvNombre"
+                android:textColor="@android:color/background_light" android:textSize="24sp"
+                android:textAlignment="textStart"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="104dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
+        <TextView
+                android:text="Carrera"
+                android:layout_width="383dp"
+                android:layout_height="46dp"
+                android:id="@+id/tvCarrera"
+                android:textColor="@android:color/background_light" android:textSize="24sp"
+                android:textAlignment="textStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvNoControl"
+                android:visibility="visible" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imgFotoUser" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.259"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

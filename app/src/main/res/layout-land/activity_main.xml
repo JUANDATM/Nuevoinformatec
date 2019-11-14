@@ -11,8 +11,9 @@
             android:layout_height="67dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/btnBuscar"
-            android:layout_marginTop="108dp" app:layout_constraintTop_toBottomOf="@+id/etNoControl-buscar"
-            android:hint="Numero de Control" android:onClick="consultaXNoControl"/>
+            android:hint="Numero de Control" android:onClick="consultaXNoControl"
+            app:layout_constraintHorizontal_bias="0.802" android:layout_marginTop="76dp"
+            app:layout_constraintTop_toTopOf="parent"/>
     <EditText
             android:layout_width="273dp"
             android:layout_height="95dp"
@@ -21,7 +22,7 @@
             android:id="@+id/etNoControl-buscar"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="68dp" android:textAlignment="center" android:textSize="24sp"
-            android:layout_marginTop="88dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="68dp" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="70dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            app:layout_constraintHorizontal_bias="0.021"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
