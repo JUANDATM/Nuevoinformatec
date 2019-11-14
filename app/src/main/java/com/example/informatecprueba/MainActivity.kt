@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
     var nombre : String =""
     var carrera : String = ""
     var foto : String = ""
-    var wsConsultar : String = "http://192.168.137.181/Servicios/MostrarAlumno.php"//AGREGAMOS LA DIRECCIONDE DONDE SE VA A CONSUMIR EL SERVICIO WEB
+    var qr : String = ""
+    var wsConsultar : String = "http://192.168.43.224/Servicios/MostrarAlumno.php"//AGREGAMOS LA DIRECCIONDE DONDE SE VA A CONSUMIR EL SERVICIO WEB
     var hilo : ObtenerUnServicioWeb? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,8 +42,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
-
     inner class ObtenerUnServicioWeb(): AsyncTask<String, String, String>(){
 
         override fun doInBackground(vararg params: String?): String {
@@ -107,6 +106,7 @@ class MainActivity : AppCompatActivity() {
             var nom = ""
             var carr = ""
             var fot = ""
+            var qrr = ""
             try {
                 val respuestaJSON = JSONObject(result)
                 val resultJSON = respuestaJSON.getString("success")
@@ -119,16 +119,19 @@ class MainActivity : AppCompatActivity() {
                             nom = alumnoJSON.getJSONObject(0).getString("Nombre")
                             carr = alumnoJSON.getJSONObject(0).getString("Carrera")
                             fot = alumnoJSON.getJSONObject(0).getString("Foto")
+                            qrr = alumnoJSON.getJSONObject(0).getString("QR")
                             ncontrol = no
                             nombre =nom
                             carrera = carr
                             foto =  fot
+                            qr = qrr
                             Toast.makeText(baseContext, "ALUMNO ENCONTRADO", Toast.LENGTH_SHORT).show()
                             val intent = Intent(baseContext,CredencialActivity::class.java)
                             intent.putExtra(CredencialActivity.EXTRA_NoControl,ncontrol)
                             intent.putExtra(CredencialActivity.EXTRA_Nombre,nombre)
                             intent.putExtra(CredencialActivity.EXTRA_Carrera,carrera)
                             intent.putExtra(CredencialActivity.EXTRA_Foto,foto)
+                            intent.putExtra(CredencialActivity.EXTRA_QR,qr)
                             startActivity(intent)
                         }
                     }

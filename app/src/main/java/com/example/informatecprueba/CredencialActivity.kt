@@ -17,6 +17,7 @@ class CredencialActivity : AppCompatActivity() {
         var EXTRA_Nombre = "ExtraNombre"
         var EXTRA_Carrera = "ExtraCarrera"
         var EXTRA_Foto = "ExtraFoto"
+        var EXTRA_QR = "ExtraQR"
 
     }
 
@@ -29,10 +30,13 @@ class CredencialActivity : AppCompatActivity() {
             var Nombre=intent.getStringExtra(EXTRA_Nombre)
             var Carrera=intent.getStringExtra(EXTRA_Carrera)
             var Foto=intent.getStringExtra(EXTRA_Foto)
+            var Qr = intent.getStringExtra(EXTRA_QR)
             tvNoControl.text =NControl
             tvCarrera.text = Carrera
             tvNombre.text = Nombre
             Picasso.get().load(Foto).into(imgFotoUser)
+            Picasso.get().load(Qr).into(imgQR)
+
 
     }
 }
