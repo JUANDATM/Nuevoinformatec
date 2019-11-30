@@ -13,7 +13,7 @@ import org.json.JSONObject
 
 class CredencialActivity : AppCompatActivity() {
     companion object {//se declara el companion object para tener acceso a las variables que deseamos traer
-        var EXTRA_NoControl = "extraNoControl"
+    var EXTRA_NoControl = "extraNoControl"
         var EXTRA_Nombre = "ExtraNombre"
         var EXTRA_Carrera = "ExtraCarrera"
         var EXTRA_Foto = "ExtraFoto"
@@ -26,17 +26,15 @@ class CredencialActivity : AppCompatActivity() {
         setContentView(R.layout.activity_credencial)
 
         val intent = intent
-           var NControl=intent.getStringExtra(EXTRA_NoControl)
-            var Nombre=intent.getStringExtra(EXTRA_Nombre)
-            var Carrera=intent.getStringExtra(EXTRA_Carrera)
-            var Foto=intent.getStringExtra(EXTRA_Foto)
-            var Qr = intent.getStringExtra(EXTRA_QR)
-            tvNoControl.text =NControl
-            tvCarrera.text = Carrera
-            tvNombre.text = Nombre
-            Picasso.get().load(Foto).into(imgFotoUser)
-            Picasso.get().load(Qr).into(imgQR)
-
-
+        var NControl=intent.getStringExtra(EXTRA_NoControl)
+        var Nombre=intent.getStringExtra(EXTRA_Nombre)
+        var Carrera=intent.getStringExtra(EXTRA_Carrera)
+        var Foto=intent.getStringExtra(EXTRA_Foto)
+        var Qr = intent.getStringExtra(EXTRA_QR)
+        tvNoControl.text =NControl
+        tvCarrera.text = Carrera
+        tvNombre.text = Nombre
+        Picasso.get().load(Foto).into(imgFotoUser)
+        Picasso.get().load(Qr).into(imgQR)
     }
 }
